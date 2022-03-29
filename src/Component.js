@@ -16,7 +16,9 @@ export class Component {
   }
 
   setState(param) {
-    this.state = typeof param === "function" ? param(this.state) : param;
+    this.state = typeof param === "function"
+      ? param(this.state)
+      : param;
     this.forceUpdate();
   }
 

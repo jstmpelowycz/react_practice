@@ -44,11 +44,9 @@ export class WordsList extends Component {
     return `
       <h1>${title}</h1>
       <ul>
-        ${
-          words
+        ${words
             .map((word) => `<li>${word}</li>`)
-            .join("")
-        }
+            .join("")}
       </ul>
     `;
   }
