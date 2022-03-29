@@ -2,7 +2,7 @@ const initialWords = ["one", "two"];
 
 const initialState = {
   title: "Title 1",
-  words: initialWords
+  words: initialWords,
 };
 
 export const app = {
@@ -18,14 +18,14 @@ export const app = {
   addWord(word) {
     this.setState({
       ...this.state,
-      words: [...this.state.words, word]
+      words: [...this.state.words, word],
     });
   },
 
   setTitle(title) {
     this.setState({
       ...this.state,
-      title: title
+      title: title,
     });
   },
 
@@ -36,7 +36,11 @@ export const app = {
       <div>
         <h1>${title}</h1>
         <ul>
-          ${words.map((word) => `<li>${word}</li>`).join("")}
+          ${
+            words
+              .map((word) => `<li>${word}</li>`)
+              .join("")
+          }
         </ul>
       </div>
     `;
