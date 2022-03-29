@@ -17,16 +17,12 @@ export const app = {
 
   addWord(word) {
     this.setState({
-      ...this.state,
       words: [...this.state.words, word],
     });
   },
 
   setTitle(title) {
-    this.setState({
-      ...this.state,
-      title: title,
-    });
+    this.setState({ title });
   },
 
   render() {
@@ -49,7 +45,11 @@ export const app = {
   },
 
   setState(newState) {
-    this.state = newState;
+    this.state = {
+      ...this.state,
+      ...newState,
+    };
+    
     this.forceUpdate();
   }
 };

@@ -26,16 +26,12 @@ export class WordsList extends Component {
 
   addWord(word) {
     this.setState({
-      ...this.state,
       words: [...this.state.words, word],
     });
   }
 
   setTitle(title) {
-    this.setState({
-      ...this.state,
-      title: title,
-    });
+    this.setState({ title });
   }
 
   render() {
